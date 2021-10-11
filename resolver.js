@@ -4,6 +4,11 @@ import { Resolver } from 'did-resolver'
 
 import {CeramicClient} from '@ceramicnetwork/http-client'
 
+
+
+async function  start(){
+
+
 // You need an instance of Ceramic to call getResolver.
 // This can be either @ceramicnetwork/core or @ceramicnetwork/http-client.
 // You can also set an address for your own ethr-did-registry contract
@@ -16,5 +21,10 @@ const ceramic = new CeramicClient(API_URL)
 const threeIdResolver = ThreeIdResolver.getResolver(ceramic)
 const didResolver = new Resolver(threeIdResolver)
 
-const doc = await didResolver.resolve('did:ethr:0xf3beac30c498d9e26865f34fcaa57dbb935b0d74')
-console.log(doc)
+const doc = await didResolver.resolve('did:3:kjzl6cwe1jw145c2q70qv1xlzljithk72u1c8s3o3duwxwtibxlmfqezyj2i5jk')
+console.log(JSON.stringify(doc))
+
+}
+
+
+start()
