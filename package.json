@@ -1,0 +1,20 @@
+{
+  "name": "ceramic-sandbox",
+  "version": "1.0.0",
+  "description": "a test sandbox for playing around with ceramic and did identities",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "client": "node client.js",
+    "resolver": "node resolver.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@3id/connect": "^0.2.5",
+    "@ceramicnetwork/3id-did-resolver": "^1.4.3",
+    "@ceramicnetwork/http-client": "^1.3.0",
+    "did-resolver": "^3.1.2"
+  }
+}
